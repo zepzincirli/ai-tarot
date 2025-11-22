@@ -1,0 +1,116 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card-flip {
+  transform: rotateY(90deg);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.3s ease;
+}
+
+.card-flip.show {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  background: linear-gradient(180deg, #f5f0ff, #ffffff);
+  font-family: "Inter", sans-serif;
+  padding-bottom: 40px;
+  position: relative;
+  overflow-x: hidden;
+}
+.glow-button {
+  box-shadow: 0 0 0px rgba(138, 43, 226, 0.6);
+  transition: box-shadow 0.4s ease, transform 0.2s ease;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 18px rgba(138, 43, 226, 0.7), 0 0 30px rgba(138, 43, 226, 0.4);
+  transform: scale(1.05);
+}
+
+.glow-button:active {
+  transform: scale(0.97);
+}
+
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.25;
+  animation: twinkle 8s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.32;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
